@@ -16,9 +16,6 @@ const Thirdcont = (props: Props) => {
   return (
     <div className="w-full">
       <Featurecard />
-      <div className="-z-10 fixed bottom-0 lg:relative opacity-40 dark:opacity-100">
-        <img src="./assets/bg.png" alt="" className="filter blur-sm" />
-      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { Pagination } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -10,17 +10,17 @@ interface Props {}
 
 const contentthree = [
   {
-    title: "Q1 2022",
+    title: "Phase 1",
     discription:
       "Diamond Bank is a Next Generation Multi Chain Hedge Fund introduces innovative mechanics and proven hyper growth strategies",
   },
   {
-    title: "Q2 2022",
+    title: "Phase 2",
     discription:
       "Our hyper growth strategies combined with Diamond Miners & Nodes generate additional revenue for our members and the protocol. ",
   },
   {
-    title: "Q3 2022",
+    title: "Phase 3",
     discription:
       "Diamond Mining and Diamond Nodes are currently in development. Both will further complement the growth of the protocol.",
   },
@@ -30,8 +30,16 @@ const Featurecard = (props: Props) => {
   return (
     <section className="h-full w-full pb-16 lg:pb-16 flex flex-col lg:flex-row flex-wrap justify-around items-center">
       <Swiper
-        pagination={true}
-        modules={[Pagination]}
+        pagination={{
+          dynamicBullets: true,
+          clickable: true,
+        }}
+        modules={[Pagination, Autoplay, Navigation]}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         className="w-full mySwiper h-full"
         onSlideChange={() => {
           gsap.fromTo(

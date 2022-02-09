@@ -7,10 +7,16 @@ const Website = dynamic(() => import("../components/website"), {
   loading: () => <Loading />,
 });
 
+const DarkCtx = dynamic(() => import("../context/darkCtx"), {
+  ssr: false,
+});
+
 const Home: NextPage = () => {
   return (
     <div className="bg-slate-100 h-screen dark:bg-slate-900 text-slate-900 dark:text-slate-100">
-      <Website />
+      <DarkCtx>
+        <Website />
+      </DarkCtx>
     </div>
   );
 };

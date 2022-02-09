@@ -15,12 +15,17 @@ const Secondcont = (props: Props) => {
       { opacity: 0 },
       { opacity: 1, delay: (i) => i * 0.05 }
     );
+    gsap.fromTo(
+      "#wholeTitle",
+      { translateX: 30 },
+      { translateX: 0, duration: 2 }
+    );
   });
   const eachTitle = content.title.split("");
   return (
     <div className="grid grid-cols-6 grid-rows-2 pt-24">
       <div className="col-span-6 lg:col-span-2 row-span-1 flex flex-col justify-evenly lg:justify-start lg:row-span-2">
-        <h1 className="text-3xl lg:text-6xl uppercase">
+        <h1 id="wholeTitle" className="text-3xl lg:text-6xl uppercase">
           {eachTitle.map((el) => (
             <span id="titleLetter" key={el + Math.random()}>
               {el}
@@ -28,10 +33,10 @@ const Secondcont = (props: Props) => {
           ))}
         </h1>
 
-        <p className="text-xs  lg:text-sm">
-          At launch Diamond Bank will have
+        <div className="text-xs  lg:text-sm">
+          At launch ShyNinja will have
           <span className="tracking-wider text-sky-700 dark:text-sky-400">
-            10,000 $DB
+            1,000,000,000
           </span>{" "}
           tokens.
           <div className="shadow-lg rounded-2xl w-full p-4 my-4 bg-white dark:bg-gray-800">
@@ -53,10 +58,10 @@ const Secondcont = (props: Props) => {
               </h2>
             </div>
             <div className="flex flex-col justify-start">
-              <p className="text-gray-700 dark:text-gray-100 text-4xl text-left font-bold my-4">
-                10,000
-                <span className="text-sm">$DB</span>
-              </p>
+              <div className="text-gray-700 dark:text-gray-100 text-4xl text-left font-bold my-4">
+                1,000,000,000
+                <span className="text-sm"> Tokens</span>
+              </div>
               <div className="flex items-center text-sky-800 text-sm">
                 <svg
                   width="20"
@@ -71,23 +76,16 @@ const Secondcont = (props: Props) => {
               </div>
             </div>
           </div>
-        </p>
+        </div>
         <div className="bg-none">
           <h1 className="text-3xl">Distribution </h1>
           <p className="text-xs text-justify p-2">
-            Diamond Bank had no presales, no whitelists, no VC&apos;s, No team
-            allocation. Basically no dilution of any kind. 100% of the token
-            supply will go to traderjoe to the liquidity pool. No more worries
-            of a team or white list members dumping on you again. Diamond Bank
-            Started with 2.5 Million Dollars Self Funded Capital. We use our own
-            money to launch the first 4 projects and marketing. Diamond bank
-            will receive a smallest in the industry 5% managmenet fee on all
-            profits. We may need to make a pie chart.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut
+            laboriosam eaque, blanditiis error laborum impedit dolorem. Quo,
+            omnis doloribus iste id, distinctio similique, labore perspiciatis
+            illo minima ab officia ipsa?
           </p>
         </div>
-      </div>
-      <div className="col-span-6 -z-10 fixed bottom-0 lg:relative opacity-40 dark:opacity-100">
-        <img src="./assets/bg.png" alt="" className="filter blur-sm " />
       </div>
     </div>
   );

@@ -20,59 +20,9 @@ import gsap from "gsap";
 import DarkMode from "./darkmode";
 import { Darkcontext } from "../context/darkCtx";
 
-const Logo = (classname: string) => (
-  <svg
-    version="1.0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="508.000000pt"
-    height="425.000000pt"
-    viewBox="0 0 508.000000 425.000000"
-    preserveAspectRatio="xMidYMid meet"
-    className={classname}
-  >
-    <g
-      transform="translate(0.000000,425.000000) scale(0.100000,-0.100000)"
-      stroke="none"
-    >
-      <path
-        d="M1542 4230 c-403 -9 -734 -19 -736 -21 -6 -7 660 -884 671 -884 6 0
-188 200 404 445 459 520 426 480 408 479 -8 -1 -344 -9 -747 -19z"
-      />
-      <path
-        d="M2742 4238 c2 -3 201 -202 444 -441 l440 -435 303 420 c166 231 300
-422 297 425 -4 5 -404 15 -1344 35 -78 2 -141 0 -140 -4z"
-      />
-      <path
-        d="M2066 3743 l-456 -498 461 -3 c253 -1 665 -1 916 0 l455 3 -452 495
-c-249 272 -457 496 -461 498 -4 2 -213 -221 -463 -495z"
-      />
-      <path
-        d="M316 3688 l-308 -433 311 -3 c171 -1 450 -1 620 0 l310 3 -305 430
-c-168 237 -309 431 -313 433 -4 1 -146 -192 -315 -430z"
-      />
-      <path
-        d="M4129 3682 l-275 -437 604 -3 c333 -1 607 0 609 2 5 5 -647 876 -656
-876 -3 -1 -130 -197 -282 -438z"
-      />
-      <path
-        d="M37 2986 c135 -161 2158 -2524 2160 -2522 1 1 -196 577 -439 1279
-l-441 1277 -654 0 -654 0 28 -34z"
-      />
-      <path
-        d="M1614 2998 c3 -13 208 -688 456 -1501 247 -813 450 -1481 450 -1485
-0 -4 5 0 10 9 7 13 799 2317 975 2842 l54 157 -976 0 -975 0 6 -22z"
-      />
-      <path
-        d="M4232 3005 c-277 -7 -507 -17 -511 -21 -8 -9 -801 -2502 -801 -2517
-0 -8 2126 2513 2143 2541 10 15 -113 14 -831 -3z"
-      />
-    </g>
-  </svg>
-);
-
 const menus = [
   {
-    name: "Bank Board",
+    name: "Dashboard",
     description:
       "Get a better understanding of where your traffic is coming from.",
     href: "#",
@@ -97,7 +47,7 @@ const menus = [
     icon: MdOutbond,
   },
   {
-    name: "Diamond Appraisal",
+    name: "Appraisal",
     description:
       "Build strategic funnels that will drive your customers to convert",
     href: "#",
@@ -138,13 +88,13 @@ const resources = [
   },
 ];
 const recentPosts = [
-  { id: 1, name: "Where’s the Road Map?", href: "#" },
+  { id: 1, name: "Social Media Post 1", href: "#" },
   {
     id: 2,
-    name: "Diamond Bank Dao is building true wealth for the masses.",
+    name: "Social Media Post 2",
     href: "#",
   },
-  { id: 3, name: "$1,000,000.00 Giveaway!", href: "#" },
+  { id: 3, name: "Social Media Post  2", href: "#" },
 ];
 
 function classNames(...classes: any[]) {
@@ -159,11 +109,13 @@ export default function Header() {
       <Popover className="relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
-            <div className="flex justify-start lg:w-0 lg:flex-1">
+            <div className="flex justify-start items-center lg:w-0 lg:flex-1">
               <a href="">
-                <span className="sr-only">Diamond Bank</span>
+                <span className="sr-only">Shy Ninja</span>
               </a>
-              {Logo("w-8 h-8 md:w-12 fill-slate-800 dark:fill-slate-200")}
+              <span className="uppercase italic text-sm font-semibold">
+                Shy Ninja
+              </span>
             </div>
             <div className="-mr-2 -my-2 md:hidden ">
               <Popover.Button className=" rounded-md p-2 inline-flex items-center justify-center hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset ">
@@ -251,7 +203,7 @@ export default function Header() {
               </Popover>
 
               <a href="#" className="text-base font-medium">
-                Diamond Nodes
+                Tokens
               </a>
               <a href="#" className="text-base font-medium">
                 Docs
@@ -377,7 +329,7 @@ export default function Header() {
                 href="#"
                 className="whitespace-nowrap text-base font-medium  px-4 py-2 border border-transparent rounded-md shadow-sm text-white bg-sky-800 hover:bg-sky-600"
               >
-                Connect Wallet
+                $SHYNINJA
               </a>
             </div>
           </div>
@@ -459,7 +411,7 @@ export default function Header() {
               <div className="py-6 px-5 space-y-6">
                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                   <a href="#" className="text-base font-medium  hover:">
-                    Diamond Nodes
+                    Tokens
                   </a>
 
                   <a href="#" className="text-base font-medium  hover:">
@@ -480,7 +432,7 @@ export default function Header() {
                     href="#"
                     className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sky-600 hover:bg-sky-700"
                   >
-                    Connect Wallet
+                    $SHYNINJA
                   </a>
                 </div>
               </div>
